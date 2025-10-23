@@ -6,7 +6,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-primary to-accent" />
-              <span className="text-xl font-bold text-foreground">TestFlow</span>
+              <span className="text-xl font-bold text-foreground">Vibetest</span>
             </div>
             <p className="text-sm text-muted-foreground">
               Simple and powerful test management for modern teams.
@@ -42,7 +42,7 @@ const Footer = () => {
         </div>
         
         <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>© 2024 TestFlow. All rights reserved.</p>
+          <p>© 2024 Vibetest. All rights reserved.</p>
         </div>
       </div>
     </footer>

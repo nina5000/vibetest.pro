@@ -7,7 +7,7 @@ const Header = () => {
         <nav className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-primary to-accent" />
-            <span className="text-xl font-bold text-foreground">TestFlow</span>
+            <span className="text-xl font-bold text-foreground">Vibetest</span>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
