@@ -13,7 +13,6 @@ const Index = () => {
       <main>
         <Hero />
         <Features />
-        <CTA />
         
         {/* User Guide Section */}
         <section id="guide" className="py-16 px-6 bg-muted/30">
