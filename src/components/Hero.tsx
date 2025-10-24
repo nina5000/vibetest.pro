@@ -24,12 +24,9 @@ const Hero = () => {
               Create, execute, and manage your test cases effortlessly. With unlimited users and complete test history, your team can focus on what matters.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div>
               <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg shadow-accent/20 text-base">
                 Start Free Trial
-              </Button>
-              <Button size="lg" variant="outline" className="text-base">
-                Watch Demo
               </Button>
             </div>
           </div>
