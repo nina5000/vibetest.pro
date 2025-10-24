@@ -11,13 +11,13 @@ const Header = () => {
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <a href="/#features" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#features" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
               Features
             </a>
-            <a href="/guide" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#guide" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
               Guide
             </a>
-            <a href="/#contact" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#contact" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
               Contact
             </a>
           </div>
