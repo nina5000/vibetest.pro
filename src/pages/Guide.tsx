@@ -1,0 +1,185 @@
+import { Mail, FileDown, Plus, Play, MessageCircle } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { Card, CardContent } from "@/components/ui/card";
+
+const Guide = () => {
+  return (
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main className="pt-24 pb-16">
+        <div className="container mx-auto px-6 max-w-4xl">
+          {/* Hero Section */}
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              Vibetest User Guide
+            </h1>
+            <p className="text-lg text-muted-foreground">
+              Welcome! This guide will help you get started with the system quickly.
+            </p>
+          </div>
+
+          {/* Section 1: Logging In */}
+          <Card className="mb-8 border-border shadow-lg">
+            <CardContent className="p-8">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                  <Mail className="h-5 w-5 text-white" />
+                </div>
+                <h2 className="text-2xl font-bold text-foreground">1. Logging In</h2>
+              </div>
+
+              <h3 className="text-lg font-semibold text-foreground mb-3">Magic Link Authentication</h3>
+              <p className="text-muted-foreground mb-4">
+                Vibetest uses secure passwordless authentication:
+              </p>
+              <ol className="list-decimal list-inside space-y-2 text-muted-foreground mb-6 ml-2">
+                <li>Open the Vibetest login page</li>
+                <li>Enter your email address</li>
+                <li>Click Send Magic Link</li>
+                <li>Open the email from Vibetest (check your Spam folder if needed)</li>
+                <li>Click Sign in to Vibetest in the email</li>
+                <li>Done — you're automatically logged in</li>
+              </ol>
+
+              <h3 className="text-lg font-semibold text-foreground mb-3">Initial Setup</h3>
+              <p className="text-muted-foreground mb-4">
+                After your first login, create a project or ask to be added to an existing one:
+              </p>
+              <ol className="list-decimal list-inside space-y-2 text-muted-foreground ml-2">
+                <li>Click + Create New Project</li>
+                <li>Fill in the project details</li>
+                <li>Save</li>
+              </ol>
+            </CardContent>
+          </Card>
+
+          {/* Section 2: Working with Test Cases */}
+          <Card className="mb-8 border-border shadow-lg">
+            <CardContent className="p-8">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                  <FileDown className="h-5 w-5 text-white" />
+                </div>
+                <h2 className="text-2xl font-bold text-foreground">2. Working with Test Cases</h2>
+              </div>
+
+              <p className="text-muted-foreground mb-6">
+                You have two options: import existing test cases or create new ones.
+              </p>
+
+              <h3 className="text-lg font-semibold text-foreground mb-3">Option 1: Import from Qase</h3>
+              <ol className="list-decimal list-inside space-y-2 text-muted-foreground mb-6 ml-2">
+                <li>In Qase, open your repository and click Export data</li>
+                <li>Select the test cases you need</li>
+                <li>Choose JSON format</li>
+                <li>Open Vibetest</li>
+                <li>In the repository, click + Import Test Cases</li>
+                <li>Select the downloaded file</li>
+                <li>Click Apply Import</li>
+              </ol>
+
+              <h3 className="text-lg font-semibold text-foreground mb-3">Option 2: Create a New Test Case</h3>
+              <ol className="list-decimal list-inside space-y-2 text-muted-foreground ml-2">
+                <li>In the repository, click + Create Test Case</li>
+                <li>Fill in the required fields</li>
+                <li>Specify the Directory Path</li>
+                <li>Add steps using + Add Step</li>
+                <li>Click Create Test Case</li>
+              </ol>
+            </CardContent>
+          </Card>
+
+          {/* Section 3: Running Test Runs */}
+          <Card className="mb-8 border-border shadow-lg">
+            <CardContent className="p-8">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                  <Play className="h-5 w-5 text-white" />
+                </div>
+                <h2 className="text-2xl font-bold text-foreground">3. Running Test Runs</h2>
+              </div>
+
+              <p className="text-muted-foreground mb-6">
+                A Test Run is an execution of selected test cases with recorded results.
+              </p>
+
+              <h3 className="text-lg font-semibold text-foreground mb-3">Creating a Test Run</h3>
+              <ol className="list-decimal list-inside space-y-2 text-muted-foreground mb-6 ml-2">
+                <li>Go to the Test Runs section</li>
+                <li>Click Create new test run</li>
+                <li>Configure the parameters:
+                  <ul className="list-disc list-inside ml-6 mt-2 space-y-1">
+                    <li>Title</li>
+                    <li>Start date</li>
+                    <li>Select test cases</li>
+                  </ul>
+                </li>
+                <li>Click Create Run</li>
+              </ol>
+
+              <h3 className="text-lg font-semibold text-foreground mb-3">Executing Tests</h3>
+              <ol className="list-decimal list-inside space-y-2 text-muted-foreground ml-2">
+                <li>Open the active Test Run</li>
+                <li>Assign cases to users:
+                  <ul className="list-disc list-inside ml-6 mt-2 space-y-1">
+                    <li>Via the Test or Settings tab</li>
+                    <li>Select cases → Bulk Actions → Assign</li>
+                  </ul>
+                </li>
+                <li>Verify assignments in the Test tab</li>
+                <li>For each test:
+                  <ul className="list-disc list-inside ml-6 mt-2 space-y-1">
+                    <li>Open the case details</li>
+                    <li>Execute steps in order</li>
+                    <li>Mark the result of each step: Pass / Fail / Blocked / Skip</li>
+                    <li>Add comments if needed</li>
+                  </ul>
+                </li>
+                <li>Set the final test status:
+                  <ul className="list-disc list-inside ml-6 mt-2 space-y-1">
+                    <li>Passed — all steps completed successfully</li>
+                    <li>Failed — defect found</li>
+                    <li>Blocked — test cannot be executed</li>
+                    <li>Skipped — test skipped</li>
+                    <li>Retest — requires re-execution</li>
+                  </ul>
+                </li>
+              </ol>
+            </CardContent>
+          </Card>
+
+          {/* Section 4: Support */}
+          <Card className="mb-8 border-border shadow-lg">
+            <CardContent className="p-8">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                  <MessageCircle className="h-5 w-5 text-white" />
+                </div>
+                <h2 className="text-2xl font-bold text-foreground">4. Support</h2>
+              </div>
+
+              <div className="space-y-3 text-muted-foreground">
+                <p className="flex items-center gap-2">
+                  <span className="font-semibold text-foreground">Telegram:</span>
+                  <a href="https://t.me/Ninahelp" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-accent transition-colors">
+                    @Ninahelp
+                  </a>
+                </p>
+                <p className="flex items-center gap-2">
+                  <span className="font-semibold text-foreground">Email:</span>
+                  <a href="mailto:ninapopova88@gmail.com" className="text-primary hover:text-accent transition-colors">
+                    ninapopova88@gmail.com
+                  </a>
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  );
+};
+
+export default Guide;
