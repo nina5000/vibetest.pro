@@ -9,17 +9,17 @@ const features = [
   {
     icon: Upload,
     title: "Import & Export",
-    description: "Seamlessly import existing test cases or export your entire test suite in various formats for flexibility."
+    description: "Store your test cases in Git for version control. Leverage any LLM to work with your test cases, with seamless import/export capabilities."
   },
   {
     icon: Play,
     title: "Execute Test Runs",
-    description: "Run tests individually or in batches. Track results in real-time and generate comprehensive reports."
+    description: "Execute tests individually or in batches with unlimited concurrent test runs."
   },
   {
     icon: Users,
     title: "Unlimited Users",
-    description: "Invite your entire team without restrictions. Collaborate efficiently with role-based access control."
+    description: "Invite your entire team without restrictions."
   },
   {
     icon: History,
