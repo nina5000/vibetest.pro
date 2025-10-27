@@ -16,11 +16,14 @@ const CTA = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-background text-primary hover:bg-background/90 shadow-xl text-base"
+                asChild
               >
-                Start Free Trial
+                <a href="http://app.vibetest.pro/" target="_blank" rel="noopener noreferrer">
+                  Start
+                </a>
               </Button>
               <Button 
                 size="lg" 

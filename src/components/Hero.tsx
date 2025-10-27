@@ -15,7 +15,7 @@ const Hero = () => {
             
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
               Test Management
-              <span className="block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-[#7C3AED] to-[#A78BFA] bg-clip-text text-transparent">
                 Made Simple
               </span>
             </h1>
@@ -26,8 +26,8 @@ const Hero = () => {
             
             <div>
               <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg shadow-accent/20 text-base" asChild>
-                <a href="http://vibetest.pro/" target="_blank" rel="noopener noreferrer">
-                  Start Free Trial
+                <a href="http://app.vibetest.pro/" target="_blank" rel="noopener noreferrer">
+                  Start
                 </a>
               </Button>
             </div>

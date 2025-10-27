@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -9,6 +10,23 @@ const Header = () => {
         <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-primary to-accent" />
         <span className="text-xl font-bold text-foreground">Vibetest</span>
       </div>
+
+      <div className="flex items-center gap-8">
+        <Link
+          to="/guide"
+          className="text-foreground/80 hover:text-foreground transition-colors font-medium"
+        >
+          Guide
+        </Link>
+        <a
+          href="http://vibetest.pro/pricing"
+          className="text-foreground/80 hover:text-foreground transition-colors font-medium"
+        >
+          Pricing
+        </a>
+      </div>
+
+      <div className="w-[100px]" />
         </nav>
       </div>
     </header>
