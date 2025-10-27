@@ -18,12 +18,12 @@ const Header = () => {
         >
           Guide
         </Link>
-        <a
-          href="http://vibetest.pro/pricing"
+        <Link
+          to="/pricing"
           className="text-foreground/80 hover:text-foreground transition-colors font-medium"
         >
           Pricing
-        </a>
+        </Link>
       </div>
 
       <div className="w-[100px]" />
