@@ -25,8 +25,10 @@ const Hero = () => {
             </p>
             
             <div>
-              <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg shadow-accent/20 text-base">
-                Start Free Trial
+              <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg shadow-accent/20 text-base" asChild>
+                <a href="http://vibetest.pro/" target="_blank" rel="noopener noreferrer">
+                  Start Free Trial
+                </a>
               </Button>
             </div>
           </div>
