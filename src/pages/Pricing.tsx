@@ -11,7 +11,7 @@ const Pricing = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="pt-32 pb-20 px-6 bg-gradient-to-b from-muted/30 to-background">
+        <section className="pt-32 pb-4 px-6 bg-gradient-to-b from-muted/30 to-background">
           <div className="container mx-auto max-w-6xl text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Simple, Transparent Pricing
@@ -22,9 +22,26 @@ const Pricing = () => {
           </div>
         </section>
 
-        {/* Pricing Cards */}
-        <section className="py-20 px-6">
+        {/* Free Year Highlight */}
+        <section className="pt-4 pb-10 px-6">
           <div className="container mx-auto max-w-6xl">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <Card className="bg-gradient-to-r from-primary/10 to-accent/10 border-primary/20">
+                <CardContent className="p-8">
+                  <div className="flex items-center justify-center gap-3 mb-4">
+                    <Sparkles className="h-6 w-6 text-primary" />
+                    <h3 className="text-2xl font-bold text-foreground">First Year Free for Everyone</h3>
+                    <Sparkles className="h-6 w-6 text-accent" />
+                  </div>
+                  <p className="text-lg text-muted-foreground">
+                    Start using Vibetest today with full access to all features. No credit card required.
+                    After your first year, choose the plan that works best for your team.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Pricing Cards */}
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               {/* Free Plan */}
               <Card className="border-2 border-border relative overflow-hidden hover:shadow-xl transition-all duration-300">
@@ -126,23 +143,6 @@ const Pricing = () => {
                   <Button className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90" size="lg">
                     Start Free Year
                   </Button>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Free Year Highlight */}
-            <div className="mt-16 text-center max-w-3xl mx-auto">
-              <Card className="bg-gradient-to-r from-primary/10 to-accent/10 border-primary/20">
-                <CardContent className="p-8">
-                  <div className="flex items-center justify-center gap-3 mb-4">
-                    <Sparkles className="h-6 w-6 text-primary" />
-                    <h3 className="text-2xl font-bold text-foreground">First Year Free for Everyone</h3>
-                    <Sparkles className="h-6 w-6 text-accent" />
-                  </div>
-                  <p className="text-lg text-muted-foreground">
-                    Start using Vibetest today with full access to all features. No credit card required. 
-                    After your first year, choose the plan that works best for your team.
-                  </p>
                 </CardContent>
               </Card>
             </div>
