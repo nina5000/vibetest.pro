@@ -81,22 +81,12 @@ const Guide = () => {
                 </ol>
 
                 <h4 className="text-lg font-semibold text-foreground mb-3">Option 2: Create a New Test Case</h4>
-                <ol className="list-decimal list-inside space-y-2 text-muted-foreground mb-6 ml-2">
+                <ol className="list-decimal list-inside space-y-2 text-muted-foreground ml-2">
                   <li>In the repository, click + Create Test Case</li>
                   <li>Fill in the required fields</li>
                   <li>Specify the Directory Path</li>
                   <li>Add steps using + Add Step</li>
                   <li>Click Create Test Case</li>
-                </ol>
-
-                <h4 className="text-lg font-semibold text-foreground mb-3">Option 3: Import from Git</h4>
-                <ol className="list-decimal list-inside space-y-2 text-muted-foreground ml-2">
-                  <li>Upload test cases to a Git repository</li>
-                  <li>Download the repository as an archive (ZIP file)</li>
-                  <li>Open Vibetest</li>
-                  <li>In the repository, click + Import Test Cases</li>
-                  <li>Select the downloaded archive file</li>
-                  <li>Click Apply Import</li>
                 </ol>
               </CardContent>
             </Card>

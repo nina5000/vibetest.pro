@@ -13,10 +13,6 @@ const Pricing = () => {
         {/* Hero Section */}
         <section className="pt-32 pb-20 px-6 bg-gradient-to-b from-muted/30 to-background">
           <div className="container mx-auto max-w-6xl text-center">
-            <Badge className="mb-6 bg-gradient-to-r from-primary to-accent text-white border-0 px-6 py-2 text-base">
-              <Sparkles className="h-4 w-4 mr-2" />
-              Special Launch Offer
-            </Badge>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Simple, Transparent Pricing
             </h1>
@@ -146,61 +142,6 @@ const Pricing = () => {
                   <p className="text-lg text-muted-foreground">
                     Start using Vibetest today with full access to all features. No credit card required. 
                     After your first year, choose the plan that works best for your team.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="py-20 px-6 bg-muted/30">
-          <div className="container mx-auto max-w-4xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">
-              Frequently Asked Questions
-            </h2>
-            <div className="space-y-6">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-xl">What happens after the first year?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    After your first year, you can continue using Vibetest by selecting a paid plan. 
-                    You'll have the option to upgrade to Professional at $99/month or continue with limited features on a free tier.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-xl">Do I need a credit card to start?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    No credit card is required to start your free year. Simply sign up with your email address and begin using Vibetest immediately.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-xl">Can I invite my entire team?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Yes! Both the free year and Professional plans include unlimited team members. Invite as many people as you need.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-xl">What payment methods do you accept?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    We accept all major credit cards, PayPal, and wire transfers for annual subscriptions. Payment details will only be required after your first free year.
                   </p>
                 </CardContent>
               </Card>
