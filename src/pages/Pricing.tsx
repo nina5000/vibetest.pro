@@ -17,7 +17,7 @@ const Pricing = () => {
               Simple, Transparent Pricing
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-              Get started with Vibetest today and enjoy your first year completely free
+              Start free forever, upgrade when you need enterprise features
             </p>
           </div>
         </section>
@@ -28,14 +28,12 @@ const Pricing = () => {
             <div className="text-center max-w-3xl mx-auto mb-16">
               <Card className="bg-gradient-to-r from-primary/10 to-accent/10 border-primary/20">
                 <CardContent className="p-8">
-                  <div className="flex items-center justify-center gap-3 mb-4">
-                    <Sparkles className="h-6 w-6 text-primary" />
-                    <h3 className="text-2xl font-bold text-foreground">First Year Free for Everyone</h3>
-                    <Sparkles className="h-6 w-6 text-accent" />
-                  </div>
+                  <h3 className="text-2xl font-bold text-foreground mb-4 text-center">✨ Free Forever Plan ✨</h3>
                   <p className="text-lg text-muted-foreground">
-                    Start using Vibetest today with full access to all features. No credit card required.
-                    After your first year, choose the plan that works best for your team.
+                    Start using Vibetest today with unlimited test cases, unlimited concurrent runs, Git & LLM integration, and unlimited team members. No credit card required.
+                  </p>
+                  <p className="text-lg text-muted-foreground mt-4">
+                    Need SSO, self-hosted deployment, or test case versioning? Upgrade to Professional for $35/user/month.
                   </p>
                 </CardContent>
               </Card>
@@ -46,11 +44,10 @@ const Pricing = () => {
               {/* Free Plan */}
               <Card className="border-2 border-border relative overflow-hidden hover:shadow-xl transition-all duration-300">
                 <CardHeader className="text-center pb-8">
-                  <CardTitle className="text-3xl mb-2">Free Trial</CardTitle>
+                  <CardTitle className="text-3xl mb-2">Free</CardTitle>
                   <CardDescription className="text-lg">Perfect for getting started</CardDescription>
                   <div className="mt-6">
                     <div className="text-5xl font-bold text-foreground mb-2">$0</div>
-                    <div className="text-muted-foreground">First year free</div>
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-6">
@@ -102,9 +99,9 @@ const Pricing = () => {
                   <CardDescription className="text-lg">For teams that need more</CardDescription>
                   <div className="mt-6">
                     <div className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
-                      $99
+                      $35
                     </div>
-                    <div className="text-muted-foreground">per month, after first year</div>
+                    <div className="text-muted-foreground">per month</div>
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-6">
@@ -125,23 +122,41 @@ const Pricing = () => {
                       <div className="h-6 w-6 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0 mt-0.5">
                         <Check className="h-4 w-4 text-white" />
                       </div>
-                      <span className="text-muted-foreground">Advanced analytics</span>
+                      <span className="text-muted-foreground">SSO</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <div className="h-6 w-6 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0 mt-0.5">
                         <Check className="h-4 w-4 text-white" />
                       </div>
-                      <span className="text-muted-foreground">Custom integrations</span>
+                      <span className="text-muted-foreground">Self-hosted deployment</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <div className="h-6 w-6 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0 mt-0.5">
                         <Check className="h-4 w-4 text-white" />
                       </div>
-                      <span className="text-muted-foreground">Dedicated account manager</span>
+                      <span className="text-muted-foreground">Test case versioning</span>
                     </li>
                   </ul>
                   <Button className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90" size="lg">
-                    Start Free Year
+                    Start
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Bottom Highlight */}
+            <div className="text-center max-w-3xl mx-auto mt-16">
+              <Card className="bg-gradient-to-r from-primary/10 to-accent/10 border-primary/20">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-bold text-foreground mb-4 text-center">Need Custom Features or Integrations?</h3>
+                  <p className="text-lg text-muted-foreground">
+                    We build custom solutions for enterprise clients — from specialized integrations to bespoke features tailored to your workflow.
+                  </p>
+                  <p className="text-lg text-muted-foreground mt-4">
+                    Pricing: Fixed-price quotes starting from $5,000. No hourly rates, no surprises.
+                  </p>
+                  <Button variant="outline" className="mt-6" size="lg">
+                    Contact us for details
                   </Button>
                 </CardContent>
               </Card>
