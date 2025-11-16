@@ -37,18 +37,24 @@ const Pricing = () => {
             </div>
 
             {/* Pricing Cards */}
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               {/* Professional Plan */}
-              <Card className="border-2 border-border relative overflow-hidden hover:shadow-xl transition-all duration-300">
-                <CardHeader className="text-center pb-8">
-                  <CardTitle className="text-3xl mb-2">Professional</CardTitle>
-                  <CardDescription className="text-lg">Perfect for getting started</CardDescription>
-                  <div className="mt-6">
-                    <div className="text-5xl font-bold text-foreground mb-2">$0</div>
+              <Card className="border border-border relative overflow-hidden hover:shadow-lg transition-all duration-300">
+                <CardHeader className="text-center pb-6">
+                  <CardTitle className="text-2xl mb-1">Professional</CardTitle>
+                  <CardDescription className="text-base">Perfect for small teams</CardDescription>
+                  <div className="mt-4">
+                    <div className="text-4xl font-bold text-foreground mb-1">$0</div>
                   </div>
                 </CardHeader>
-                <CardContent className="space-y-6">
-                  <ul className="space-y-4">
+                <CardContent className="space-y-4 pt-0">
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-3">
+                      <div className="h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="h-4 w-4 text-primary" />
+                      </div>
+                      <span className="text-muted-foreground">Up to 3 users</span>
+                    </li>
                     <li className="flex items-start gap-3">
                       <div className="h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                         <Check className="h-4 w-4 text-primary" />
@@ -59,25 +65,19 @@ const Pricing = () => {
                       <div className="h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                         <Check className="h-4 w-4 text-primary" />
                       </div>
-                      <span className="text-muted-foreground">Unlimited concurrent test runs</span>
+                      <span className="text-muted-foreground">Up to 500 test runs per month</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <div className="h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                         <Check className="h-4 w-4 text-primary" />
                       </div>
-                      <span className="text-muted-foreground">Git integration</span>
+                      <span className="text-muted-foreground">Import/Export (JSON, CSV)</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <div className="h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                         <Check className="h-4 w-4 text-primary" />
                       </div>
-                      <span className="text-muted-foreground">LLM integration</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <Check className="h-4 w-4 text-primary" />
-                      </div>
-                      <span className="text-muted-foreground">Up to 10 users</span>
+                      <span className="text-muted-foreground">Last 30 days history</span>
                     </li>
                   </ul>
                   <Button variant="outline" className="w-full" size="lg">
@@ -86,23 +86,84 @@ const Pricing = () => {
                 </CardContent>
               </Card>
 
-              {/* Business Plan */}
-              <Card className="border-2 border-border relative overflow-hidden hover:shadow-xl transition-all duration-300">
-                <CardHeader className="text-center pb-8">
-                  <CardTitle className="text-3xl mb-2">Business</CardTitle>
-                  <CardDescription className="text-lg">For growing teams</CardDescription>
-                  <div className="mt-6">
-                    <div className="text-5xl font-bold text-foreground mb-2">$100</div>
-                    <div className="text-muted-foreground">per month</div>
+              {/* Team Plan */}
+              <Card className="border border-border relative overflow-hidden hover:shadow-lg transition-all duration-300">
+                <CardHeader className="text-center pb-6">
+                  <CardTitle className="text-2xl mb-1">Team</CardTitle>
+                  <CardDescription className="text-base">For growing QA teams</CardDescription>
+                  <div className="mt-4">
+                    <div className="text-4xl font-bold text-foreground mb-1">$12</div>
+                    <div className="text-sm text-muted-foreground">per user/month</div>
                   </div>
                 </CardHeader>
-                <CardContent className="space-y-6">
-                  <ul className="space-y-4">
+                <CardContent className="space-y-4 pt-0">
+                  <ul className="space-y-3">
                     <li className="flex items-start gap-3">
                       <div className="h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                         <Check className="h-4 w-4 text-primary" />
                       </div>
                       <span className="text-foreground font-medium">Everything in Professional, plus:</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="h-4 w-4 text-primary" />
+                      </div>
+                      <span className="text-muted-foreground">Up to 25 users</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="h-4 w-4 text-primary" />
+                      </div>
+                      <span className="text-muted-foreground">Unlimited test runs</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="h-4 w-4 text-primary" />
+                      </div>
+                      <span className="text-muted-foreground">90 days history storage</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="h-4 w-4 text-primary" />
+                      </div>
+                      <span className="text-muted-foreground">Bulk operations</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="h-4 w-4 text-primary" />
+                      </div>
+                      <span className="text-muted-foreground">Email support</span>
+                    </li>
+                  </ul>
+                  <Button variant="outline" className="w-full" size="lg">
+                    Start Free Trial
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* Business Plan */}
+              <Card className="border border-border relative overflow-hidden hover:shadow-lg transition-all duration-300">
+                <CardHeader className="text-center pb-6">
+                  <CardTitle className="text-2xl mb-1">Business</CardTitle>
+                  <CardDescription className="text-base">For established teams</CardDescription>
+                  <div className="mt-4">
+                    <div className="text-4xl font-bold text-foreground mb-1">$20</div>
+                    <div className="text-sm text-muted-foreground">per user/month</div>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-4 pt-0">
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-3">
+                      <div className="h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="h-4 w-4 text-primary" />
+                      </div>
+                      <span className="text-foreground font-medium">Everything in Team, plus:</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="h-4 w-4 text-primary" />
+                      </div>
+                      <span className="text-muted-foreground">Unlimited history storage</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <div className="h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -124,19 +185,22 @@ const Pricing = () => {
                     </li>
                   </ul>
                   <Button variant="outline" className="w-full" size="lg">
-                    Upgrade Now
+                    Start Free Trial
                   </Button>
                 </CardContent>
               </Card>
 
               {/* Enterprise Plan */}
-              <Card className="border-2 border-primary relative overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
-                <CardHeader className="text-center pb-8">
-                  <CardTitle className="text-3xl mb-2">Enterprise</CardTitle>
-                  <CardDescription className="text-lg">For teams that need more</CardDescription>
+              <Card className="border border-primary relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                <CardHeader className="text-center pb-6">
+                  <CardTitle className="text-2xl mb-1">Enterprise</CardTitle>
+                  <CardDescription className="text-base">For organizations with specific needs</CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-6">
-                  <ul className="space-y-4">
+                <CardContent className="space-y-4">
+                  <div className="text-center mb-2">
+                    <div className="text-lg font-semibold text-foreground">Custom Pricing</div>
+                  </div>
+                  <ul className="space-y-3">
                     <li className="flex items-start gap-3">
                       <div className="h-6 w-6 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0 mt-0.5">
                         <Check className="h-4 w-4 text-white" />
@@ -168,7 +232,10 @@ const Pricing = () => {
                       <span className="text-muted-foreground">Test case versioning</span>
                     </li>
                   </ul>
-                  <Button className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90" size="lg">
+                  <p className="text-sm text-muted-foreground mt-6 text-center">
+                    We offer flexible, fixed-price contracts tailored to your organization—not based on user count. Contact us to discuss your requirements.
+                  </p>
+                  <Button className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90 mt-4" size="lg">
                     Contact Sales
                   </Button>
                 </CardContent>
