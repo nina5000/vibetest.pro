@@ -1,4 +1,4 @@
-import { Mail, FileDown, Plus, Play, MessageCircle } from "lucide-react";
+import { Mail, FileDown, Play, MessageCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -8,24 +8,27 @@ const Guide = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        {/* User Guide Section */}
-        <section id="guide" className="py-32 px-6 bg-muted/30">
-          <div className="container mx-auto max-w-4xl">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Vibetest User Guide
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Welcome! This guide will help you get started with the system quickly.
-              </p>
-            </div>
+        {/* Hero Section */}
+        <section className="pt-32 pb-12 px-6">
+          <div className="container mx-auto max-w-6xl text-center">
+            <h1 className="text-5xl md:text-6xl font-bold mb-4 text-foreground">
+              Vibetest User Guide
+            </h1>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Welcome! This guide will help you get started with the system quickly.
+            </p>
+          </div>
+        </section>
 
+        {/* Guide Sections */}
+        <section className="pb-16 px-6">
+          <div className="container mx-auto max-w-4xl">
             {/* Section 1: Logging In */}
-            <Card className="mb-8 border-border shadow-lg">
+            <Card className="mb-8 border border-border hover:shadow-lg transition-all duration-300">
               <CardContent className="p-8">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                    <Mail className="h-5 w-5 text-white" />
+                  <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <Mail className="h-5 w-5 text-primary" />
                   </div>
                   <h3 className="text-2xl font-bold text-foreground">1. Logging In</h3>
                 </div>
@@ -45,7 +48,7 @@ const Guide = () => {
 
                 <h4 className="text-lg font-semibold text-foreground mb-3">Initial Setup</h4>
                 <p className="text-muted-foreground mb-4">
-                  After your first login, create a project or ask to be added to an existing one:
+                  After your first login, create an organization or ask to be added to an existing one. Then, create a project or ask to be added to an existing one:
                 </p>
                 <ol className="list-decimal list-inside space-y-2 text-muted-foreground ml-2">
                   <li>Click + Create New Project</li>
@@ -56,11 +59,11 @@ const Guide = () => {
             </Card>
 
             {/* Section 2: Working with Test Cases */}
-            <Card className="mb-8 border-border shadow-lg">
+            <Card className="mb-8 border border-border hover:shadow-lg transition-all duration-300">
               <CardContent className="p-8">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                    <FileDown className="h-5 w-5 text-white" />
+                  <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <FileDown className="h-5 w-5 text-primary" />
                   </div>
                   <h3 className="text-2xl font-bold text-foreground">2. Working with Test Cases</h3>
                 </div>
@@ -92,11 +95,11 @@ const Guide = () => {
             </Card>
 
             {/* Section 3: Running Test Runs */}
-            <Card className="mb-8 border-border shadow-lg">
+            <Card className="mb-8 border border-border hover:shadow-lg transition-all duration-300">
               <CardContent className="p-8">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                    <Play className="h-5 w-5 text-white" />
+                  <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <Play className="h-5 w-5 text-primary" />
                   </div>
                   <h3 className="text-2xl font-bold text-foreground">3. Running Test Runs</h3>
                 </div>
@@ -151,11 +154,11 @@ const Guide = () => {
             </Card>
 
             {/* Section 4: Support */}
-            <Card className="mb-8 border-border shadow-lg">
+            <Card className="mb-8 border border-border hover:shadow-lg transition-all duration-300">
               <CardContent className="p-8">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                    <MessageCircle className="h-5 w-5 text-white" />
+                  <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <MessageCircle className="h-5 w-5 text-primary" />
                   </div>
                   <h3 className="text-2xl font-bold text-foreground">4. Support</h3>
                 </div>
@@ -163,13 +166,13 @@ const Guide = () => {
                 <div className="space-y-3 text-muted-foreground">
                   <p className="flex items-center gap-2">
                     <span className="font-semibold text-foreground">Telegram:</span>
-                    <a href="https://t.me/Ninahelp" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-accent transition-colors">
+                    <a href="https://t.me/Ninahelp" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">
                       @Ninahelp
                     </a>
                   </p>
                   <p className="flex items-center gap-2">
                     <span className="font-semibold text-foreground">Email:</span>
-                    <a href="mailto:ninapopova88@gmail.com" className="text-primary hover:text-accent transition-colors">
+                    <a href="mailto:ninapopova88@gmail.com" className="text-primary hover:text-primary/80 transition-colors">
                       ninapopova88@gmail.com
                     </a>
                   </p>
