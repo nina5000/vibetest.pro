@@ -1,11 +1,20 @@
+import { useState } from "react";
 import { Check, X } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Switch } from "@/components/ui/switch";
+import { Label } from "@/components/ui/label";
 
 const Pricing = () => {
+  const [isYearly, setIsYearly] = useState(false);
+
+  // Pricing data
+  const businessMonthlyPrice = 120;
+  const businessYearlyPrice = 90; // 25% discount when billed yearly ($120 * 0.75 = $90/month)
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -16,9 +25,32 @@ const Pricing = () => {
             <h1 className="text-5xl md:text-6xl font-bold mb-4 text-foreground">
               Choose Your Plan
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
               Start for free and scale as your team grows. All plans include a 14-day free trial.
             </p>
+            {/* Billing Toggle */}
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <Label
+                htmlFor="billing-toggle"
+                className={`text-base cursor-pointer ${!isYearly ? "font-semibold text-foreground" : "text-muted-foreground"}`}
+              >
+                Monthly Plan
+              </Label>
+              <Switch
+                id="billing-toggle"
+                checked={isYearly}
+                onCheckedChange={setIsYearly}
+              />
+              <Label
+                htmlFor="billing-toggle"
+                className={`text-base cursor-pointer ${isYearly ? "font-semibold text-foreground" : "text-muted-foreground"}`}
+              >
+                Yearly Plan
+              </Label>
+              <span className={`ml-2 px-2 py-1 text-xs font-medium bg-primary/10 text-primary rounded-md transition-opacity ${isYearly ? "opacity-100" : "opacity-0"}`} style={{ minWidth: "70px" }}>
+                Save 25%
+              </span>
+            </div>
           </div>
         </section>
 
@@ -26,10 +58,10 @@ const Pricing = () => {
         <section className="pb-12 px-6">
           <div className="container mx-auto max-w-6xl">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {/* Professional Plan */}
+              {/* Lite Plan */}
               <Card className="border border-border hover:shadow-lg transition-all duration-300">
                 <CardHeader className="text-center pb-6">
-                  <CardTitle className="text-2xl mb-1 font-bold">Professional</CardTitle>
+                  <CardTitle className="text-2xl mb-1 font-bold">Lite</CardTitle>
                   <CardDescription className="text-base">Perfect for small teams</CardDescription>
                   <div className="mt-4">
                     <div className="text-4xl font-bold text-foreground mb-1">$0</div>
@@ -40,23 +72,27 @@ const Pricing = () => {
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3">
                       <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Up to 3 users</span>
+                      <span className="text-muted-foreground">3 users</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Unlimited test cases</span>
+                      <span className="text-muted-foreground">Email support</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Up to 500 test runs per month</span>
+                      <span className="text-muted-foreground">5 active test runs</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Import/Export (JSON, CSV)</span>
+                      <span className="text-muted-foreground">15 test marathons participants</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Last 30 days history</span>
+                      <span className="text-muted-foreground">2 test marathons</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">6 month history</span>
                     </li>
                   </ul>
                   <Button
@@ -78,31 +114,43 @@ const Pricing = () => {
                   <CardTitle className="text-2xl mb-1 font-bold">Business</CardTitle>
                   <CardDescription className="text-base">For established teams</CardDescription>
                   <div className="mt-4">
-                    <div className="text-4xl font-bold text-foreground mb-1">$20</div>
-                    <div className="text-sm text-muted-foreground">per user/month</div>
+                    <div className="text-4xl font-bold text-foreground mb-1">
+                      ${isYearly ? businessYearlyPrice : businessMonthlyPrice}
+                    </div>
+                    <div className="text-sm text-muted-foreground">
+                      per month
+                    </div>
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-4 pt-0">
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3">
                       <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-foreground font-medium">Everything in Professional, plus:</span>
+                      <span className="text-foreground font-medium">Everything in Lite, plus:</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Unlimited history storage</span>
+                      <span className="text-muted-foreground">10 users</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Priority support</span>
+                      <span className="text-muted-foreground">Premium support</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Unlimited test run history storage</span>
+                      <span className="text-muted-foreground">Unlimited active test runs</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Unlimited team members</span>
+                      <span className="text-muted-foreground">50 test marathons participants</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">6 test marathons</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">Unlimited history</span>
                     </li>
                   </ul>
                   <Button
@@ -136,19 +184,15 @@ const Pricing = () => {
                     </li>
                     <li className="flex items-start gap-3">
                       <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Priority support</span>
+                      <span className="text-muted-foreground">Custom users</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">SSO</span>
+                      <span className="text-muted-foreground">Custom test marathons participants</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Self-hosted deployment</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Test case versioning</span>
+                      <span className="text-muted-foreground">Unlimited test marathons</span>
                     </li>
                   </ul>
                   <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground mt-6" size="lg">
@@ -168,38 +212,32 @@ const Pricing = () => {
                 <TableHeader>
                   <TableRow>
                     <TableHead className="font-semibold">Features</TableHead>
-                    <TableHead className="text-center font-semibold">Professional</TableHead>
+                    <TableHead className="text-center font-semibold">Lite</TableHead>
                     <TableHead className="text-center font-semibold">Business</TableHead>
                     <TableHead className="text-center font-semibold text-primary">Enterprise</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
                   <TableRow>
-                    <TableCell className="font-medium">Number of users</TableCell>
-                    <TableCell className="text-center">Up to 3</TableCell>
+                    <TableCell className="font-medium">Users</TableCell>
+                    <TableCell className="text-center">3</TableCell>
+                    <TableCell className="text-center">10</TableCell>
+                    <TableCell className="text-center">Custom</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Support</TableCell>
+                    <TableCell className="text-center">Email</TableCell>
+                    <TableCell className="text-center">Premium support</TableCell>
+                    <TableCell className="text-center">Premium support</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Active test runs</TableCell>
+                    <TableCell className="text-center">5</TableCell>
                     <TableCell className="text-center">Unlimited</TableCell>
                     <TableCell className="text-center">Unlimited</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">Test cases</TableCell>
-                    <TableCell className="text-center">Unlimited</TableCell>
-                    <TableCell className="text-center">Unlimited</TableCell>
-                    <TableCell className="text-center">Unlimited</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">Test runs per month</TableCell>
-                    <TableCell className="text-center">500</TableCell>
-                    <TableCell className="text-center">Unlimited</TableCell>
-                    <TableCell className="text-center">Unlimited</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">History storage</TableCell>
-                    <TableCell className="text-center">30 days</TableCell>
-                    <TableCell className="text-center">Unlimited</TableCell>
-                    <TableCell className="text-center">Unlimited</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">Import/Export (JSON, CSV)</TableCell>
+                    <TableCell className="font-medium">Test case management</TableCell>
                     <TableCell className="text-center">
                       <Check className="h-5 w-5 text-primary mx-auto" />
                     </TableCell>
@@ -211,64 +249,22 @@ const Pricing = () => {
                     </TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">Email support</TableCell>
-                    <TableCell className="text-center">
-                      <X className="h-5 w-5 text-muted-foreground mx-auto" />
-                    </TableCell>
-                    <TableCell className="text-center">
-                      <Check className="h-5 w-5 text-primary mx-auto" />
-                    </TableCell>
-                    <TableCell className="text-center">
-                      <Check className="h-5 w-5 text-primary mx-auto" />
-                    </TableCell>
+                    <TableCell className="font-medium">Test marathons participants</TableCell>
+                    <TableCell className="text-center">15</TableCell>
+                    <TableCell className="text-center">50</TableCell>
+                    <TableCell className="text-center">Custom</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">Priority support</TableCell>
-                    <TableCell className="text-center">
-                      <X className="h-5 w-5 text-muted-foreground mx-auto" />
-                    </TableCell>
-                    <TableCell className="text-center">
-                      <Check className="h-5 w-5 text-primary mx-auto" />
-                    </TableCell>
-                    <TableCell className="text-center">
-                      <Check className="h-5 w-5 text-primary mx-auto" />
-                    </TableCell>
+                    <TableCell className="font-medium">Test marathons</TableCell>
+                    <TableCell className="text-center">2</TableCell>
+                    <TableCell className="text-center">6</TableCell>
+                    <TableCell className="text-center">Unlimited</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">SSO (Single Sign-On)</TableCell>
-                    <TableCell className="text-center">
-                      <X className="h-5 w-5 text-muted-foreground mx-auto" />
-                    </TableCell>
-                    <TableCell className="text-center">
-                      <X className="h-5 w-5 text-muted-foreground mx-auto" />
-                    </TableCell>
-                    <TableCell className="text-center">
-                      <Check className="h-5 w-5 text-primary mx-auto" />
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">Self-hosted deployment</TableCell>
-                    <TableCell className="text-center">
-                      <X className="h-5 w-5 text-muted-foreground mx-auto" />
-                    </TableCell>
-                    <TableCell className="text-center">
-                      <X className="h-5 w-5 text-muted-foreground mx-auto" />
-                    </TableCell>
-                    <TableCell className="text-center">
-                      <Check className="h-5 w-5 text-primary mx-auto" />
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">Test case versioning</TableCell>
-                    <TableCell className="text-center">
-                      <X className="h-5 w-5 text-muted-foreground mx-auto" />
-                    </TableCell>
-                    <TableCell className="text-center">
-                      <X className="h-5 w-5 text-muted-foreground mx-auto" />
-                    </TableCell>
-                    <TableCell className="text-center">
-                      <Check className="h-5 w-5 text-primary mx-auto" />
-                    </TableCell>
+                    <TableCell className="font-medium">History</TableCell>
+                    <TableCell className="text-center">6 month</TableCell>
+                    <TableCell className="text-center">Unlimited</TableCell>
+                    <TableCell className="text-center">Unlimited</TableCell>
                   </TableRow>
                 </TableBody>
               </Table>

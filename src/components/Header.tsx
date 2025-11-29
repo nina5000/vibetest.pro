@@ -31,7 +31,14 @@ const Header = () => {
         </Link>
       </div>
 
-      <div className="w-[100px]" />
+      <div className="flex items-center gap-3">
+        <Button variant="outline" asChild>
+          <a href="https://app.vibetest.pro/" target="_blank" rel="noopener noreferrer">Start Trial</a>
+        </Button>
+        <Button variant="default" asChild>
+          <Link to="/book-demo">Book demo</Link>
+        </Button>
+      </div>
         </nav>
       </div>
     </header>
