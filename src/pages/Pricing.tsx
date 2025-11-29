@@ -59,7 +59,12 @@ const Pricing = () => {
                       <span className="text-muted-foreground">Last 30 days history</span>
                     </li>
                   </ul>
-                  <Button variant="outline" className="w-full mt-6" size="lg" asChild>
+                  <Button
+                    variant="outline"
+                    className="w-full mt-6"
+                    size="lg"
+                    asChild
+                  >
                     <a href="https://app.vibetest.pro/" target="_blank" rel="noopener noreferrer">
                       Get Started
                     </a>
@@ -100,7 +105,12 @@ const Pricing = () => {
                       <span className="text-muted-foreground">Unlimited team members</span>
                     </li>
                   </ul>
-                  <Button variant="outline" className="w-full mt-6" size="lg" asChild>
+                  <Button
+                    variant="outline"
+                    className="w-full mt-6"
+                    size="lg"
+                    asChild
+                  >
                     <a href="https://app.vibetest.pro/" target="_blank" rel="noopener noreferrer">
                       Start Free Trial
                     </a>

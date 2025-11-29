@@ -12,7 +12,7 @@ const Guide = () => {
         <section className="pt-32 pb-12 px-6">
           <div className="container mx-auto max-w-6xl text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-4 text-foreground">
-              Vibetest User Guide
+              VibeTest User Guide
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Welcome! This guide will help you get started with the system quickly.
@@ -35,10 +35,10 @@ const Guide = () => {
 
                 <h4 className="text-lg font-semibold text-foreground mb-3">Magic Link Authentication</h4>
                 <p className="text-muted-foreground mb-4">
-                  Vibetest uses secure passwordless authentication:
+                  VibeTest uses secure passwordless authentication:
                 </p>
                 <ol className="list-decimal list-inside space-y-2 text-muted-foreground mb-6 ml-2">
-                  <li>Open the Vibetest login page</li>
+                  <li>Open the VibeTest login page</li>
                   <li>Enter your email address</li>
                   <li>Click Send Magic Link</li>
                   <li>Open the email from Vibetest (check your Spam folder if needed)</li>
@@ -77,7 +77,7 @@ const Guide = () => {
                   <li>In Qase, open your repository and click Export data</li>
                   <li>Select the test cases you need</li>
                   <li>Choose JSON format</li>
-                  <li>Open Vibetest</li>
+                  <li>Open VibeTest</li>
                   <li>In the repository, click + Import Test Cases</li>
                   <li>Select the downloaded file</li>
                   <li>Click Apply Import</li>

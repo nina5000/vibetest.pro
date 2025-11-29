@@ -30,12 +30,12 @@ const features = [
 
 const Features = () => {
   return (
-    <section id="features" className="py-24 px-6 bg-gradient-to-b from-background to-muted/30">
+    <section id="features" className="py-24 px-6 bg-[var(--gradient-subtle)]">
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Everything You Need to
-            <span className="block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <span className="block text-accent">
               Streamline Testing
             </span>
           </h2>
