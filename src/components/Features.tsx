@@ -1,4 +1,4 @@
-import { FileText, Upload, Play, Users, History } from "lucide-react";
+import { FileText, Upload, Play, Users, History, Share2 } from "lucide-react";
 
 const features = [
   {
@@ -25,6 +25,11 @@ const features = [
     icon: History,
     title: "Complete History",
     description: "Access unlimited test run history. Analyze trends and track quality improvements over time."
+  },
+  {
+    icon: Share2,
+    title: "Test Marathons",
+    description: "A simple and engaging way to gather fresh insights on your product before release. Share test runs with your team and collect valuable feedback from developers, designers, and managers."
   }
 ];
 
