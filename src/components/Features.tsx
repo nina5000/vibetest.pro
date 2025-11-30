@@ -1,35 +1,30 @@
-import { FileText, Upload, Play, Users, History, Share2 } from "lucide-react";
+import { FileText, Play, GitBranch, Share2, Users } from "lucide-react";
 
 const features = [
   {
     icon: FileText,
-    title: "Create & Store Test Cases",
-    description: "Organize your test cases with an intuitive interface. Add descriptions, steps, and expected results with ease."
-  },
-  {
-    icon: Upload,
-    title: "Import & Export",
-    description: "Store your test cases in Git for version control. Leverage any LLM to work with your test cases, with seamless import/export capabilities."
+    title: "Essential Test Case Management",
+    description: "Create and organize test cases with a clean, minimal interface. Add steps, expected results, and attachments — nothing you don't need."
   },
   {
     icon: Play,
     title: "Execute Test Runs",
-    description: "Execute tests individually or in batches with unlimited concurrent test runs."
+    description: "Run tests individually or in batches. Track results in real-time with unlimited concurrent test runs."
   },
   {
-    icon: Users,
-    title: "Unlimited Users",
-    description: "Invite your entire team without restrictions."
-  },
-  {
-    icon: History,
-    title: "Complete History",
-    description: "Access unlimited test run history. Analyze trends and track quality improvements over time."
+    icon: GitBranch,
+    title: "Git Storage & AI-Ready",
+    description: "Store test cases in Git for version control. Export in formats compatible with LLMs for AI-assisted test generation and analysis."
   },
   {
     icon: Share2,
     title: "Test Marathons",
-    description: "A simple and engaging way to gather fresh insights on your product before release. Share test runs with your team and collect valuable feedback from developers, designers, and managers."
+    description: "Our standout feature: share test runs via simple links. Anyone can participate without accounts — perfect for cross-team collaboration and pre-release validation."
+  },
+  {
+    icon: Users,
+    title: "Unlimited Users & History",
+    description: "No per-seat limits. Invite your entire organization. Complete test run history stored automatically for trend analysis."
   }
 ];
 
@@ -39,17 +34,11 @@ const Features = () => {
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Everything You Need to
-            <span className="block text-accent">
-              Streamline Testing
-            </span>
+            Core Features:
           </h2>
-          <p className="text-xl text-muted-foreground">
-            A complete test management solution designed for modern development teams
-          </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {features.map((feature, index) => (
             <div 
               key={index}
