@@ -165,15 +165,9 @@ const Guide = () => {
 
                 <div className="space-y-3 text-muted-foreground">
                   <p className="flex items-center gap-2">
-                    <span className="font-semibold text-foreground">Telegram:</span>
-                    <a href="https://t.me/Ninahelp" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">
-                      @Ninahelp
-                    </a>
-                  </p>
-                  <p className="flex items-center gap-2">
                     <span className="font-semibold text-foreground">Email:</span>
-                    <a href="mailto:ninapopova88@gmail.com" className="text-primary hover:text-primary/80 transition-colors">
-                      ninapopova88@gmail.com
+                    <a href="mailto:support@vibetest.pro" className="text-primary hover:text-primary/80 transition-colors">
+                      support@vibetest.pro
                     </a>
                   </p>
                 </div>
