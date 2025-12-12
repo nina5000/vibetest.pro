@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
-import { Badge } from "@/components/ui/badge";
 
 const Pricing = () => {
   const [isYearly, setIsYearly] = useState(false);
@@ -78,6 +77,12 @@ const Pricing = () => {
                     </li>
                     <li className="flex items-start gap-3">
                       <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground flex items-center gap-2 flex-wrap">
+                        15 guest testers
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                       <span className="text-muted-foreground">Email support</span>
                     </li>
                     <li className="flex items-start gap-3">
@@ -87,15 +92,7 @@ const Pricing = () => {
                     <li className="flex items-start gap-3">
                       <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                       <span className="text-muted-foreground flex items-center gap-2 flex-wrap">
-                        15 test marathons participants
-                        <Badge className="bg-white text-black border border-border text-xs font-semibold whitespace-nowrap">Coming soon</Badge>
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground flex items-center gap-2 flex-wrap">
                         2 test marathons
-                        <Badge className="bg-white text-black border border-border text-xs font-semibold whitespace-nowrap">Coming soon</Badge>
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
@@ -142,6 +139,12 @@ const Pricing = () => {
                     </li>
                     <li className="flex items-start gap-3">
                       <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground flex items-center gap-2 flex-wrap">
+                        50 guest testers
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                       <span className="text-muted-foreground">Premium support</span>
                     </li>
                     <li className="flex items-start gap-3">
@@ -151,15 +154,7 @@ const Pricing = () => {
                     <li className="flex items-start gap-3">
                       <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                       <span className="text-muted-foreground flex items-center gap-2 flex-wrap">
-                        50 test marathons participants
-                        <Badge className="bg-white text-black border border-border text-xs font-semibold whitespace-nowrap">Coming soon</Badge>
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground flex items-center gap-2 flex-wrap">
                         6 test marathons
-                        <Badge className="bg-white text-black border border-border text-xs font-semibold whitespace-nowrap">Coming soon</Badge>
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
@@ -203,15 +198,13 @@ const Pricing = () => {
                     <li className="flex items-start gap-3">
                       <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                       <span className="text-muted-foreground flex items-center gap-2 flex-wrap">
-                        Custom test marathons participants
-                        <Badge className="bg-white text-black border border-border text-xs font-semibold whitespace-nowrap">Coming soon</Badge>
+                        Custom guest testers
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                       <span className="text-muted-foreground flex items-center gap-2 flex-wrap">
                         Unlimited test marathons
-                        <Badge className="bg-white text-black border border-border text-xs font-semibold whitespace-nowrap">Coming soon</Badge>
                       </span>
                     </li>
                   </ul>
@@ -245,6 +238,14 @@ const Pricing = () => {
                     <TableCell className="text-center">Custom</TableCell>
                   </TableRow>
                   <TableRow>
+                    <TableCell className="font-medium">
+                      Guest testers
+                    </TableCell>
+                    <TableCell className="text-center">15</TableCell>
+                    <TableCell className="text-center">50</TableCell>
+                    <TableCell className="text-center">Custom</TableCell>
+                  </TableRow>
+                  <TableRow>
                     <TableCell className="font-medium">Support</TableCell>
                     <TableCell className="text-center">Email</TableCell>
                     <TableCell className="text-center">Premium support</TableCell>
@@ -270,17 +271,7 @@ const Pricing = () => {
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">
-                      Test marathons participants
-                      <Badge className="ml-2 bg-white text-black border border-border text-xs font-semibold whitespace-nowrap">Coming soon</Badge>
-                    </TableCell>
-                    <TableCell className="text-center">15</TableCell>
-                    <TableCell className="text-center">50</TableCell>
-                    <TableCell className="text-center">Custom</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">
                       Test marathons
-                      <Badge className="ml-2 bg-white text-black border border-border text-xs font-semibold whitespace-nowrap">Coming soon</Badge>
                     </TableCell>
                     <TableCell className="text-center">2</TableCell>
                     <TableCell className="text-center">6</TableCell>
